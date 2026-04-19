@@ -1,0 +1,341 @@
+<html>
+
+<head lang="en">
+    <!-- https://stackoverflow.com/questions/16316311/github-pages-and-relative-paths -->
+    <base href="/[repo]/"> 
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>AC/DC Coevolution</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
+    <link rel="stylesheet" href="css/app.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
+    
+    <script src="js/app.js"></script>
+    <style>
+        .media-block {
+            border-radius: 10px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+        }
+        p {
+            font-size: 17px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" id="main" style="background-color: rgba(255, 255, 255, 0.95);">
+        <div class="row">
+            <h2 class="col-md-12 text-center">
+                [AC⚡DC]<br/>Discovering Novel LLM Experts<br/>via Task-Capability Coevolution
+            </h2>
+        </div>
+
+        <style>      
+            .author-info {
+                text-align: center;
+                margin-right: 40px; /* Adjust this to move the block to the right */
+            }
+            
+            .author {
+                display: flex;
+                justify-content: center;
+                gap: 35px; /* Change this value to adjust space between authors */
+            }
+            
+            .author li, .affiliation {
+                list-style-type: none; /* This will remove the bullet points */
+            }
+            
+            .affiliation {
+                margin-top: 5px; /* Smaller values to reduce space */
+                margin-bottom: 5px;
+            }
+            
+            .author-name {
+                font-size: 17px; /* Adjust this value to increase or decrease the author name size */
+            }
+
+            .author-aff {
+                font-size: 10px; /* Adjust this value to increase or decrease the author name size */
+            }
+            /* Medium screens (Tablets) */
+            @media only screen and (max-width: 1024px) {
+                .author-name {
+                    font-size: 18px;
+                }
+                .affiliation {
+                    font-size: 13px;
+                }
+                .author {
+                    gap: 20px;
+                }
+                .author-aff {
+                    font-size: 9px;
+                }
+            }
+            
+            /* Medium screens (Tablets) */
+            @media only screen and (max-width: 768px) {
+                .author-name {
+                    font-size: 16px;
+                }
+                .affiliation {
+                    font-size: 12px;
+                }
+                .author {
+                    gap: 15px;
+                }
+                .author-aff {
+                    font-size: 8px;
+                }
+            }
+
+            .link-content {
+                text-align: center;
+            }
+
+            .list-inline li {
+                margin-right: 40px;
+                margin-left: 40px;
+            }
+
+            .author-break {
+                display: none;
+            }
+
+            /* Mobile */
+            @media only screen and (max-width: 480px) {
+                .sakana-logo {
+                    height: 60px !important;
+                }
+                h2 {
+                    font-size: 19px;
+                }
+                h3 {
+                    font-size: 18.5px;
+                }
+                h4 {
+                    font-size: 14px;
+                }
+                .author-name {
+                    font-size: 13px;
+                }
+                .author {
+                    column-gap: 20px;
+                    row-gap: 0.5px;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
+                .author-break {
+                    display: block;
+                    flex-basis: 100%;
+                    height: 0;
+                }
+                .link-content img {
+                    height: 40px !important;
+                }
+                .link-content h4 {
+                    font-size: 13px;
+                }
+                .list-inline li {
+                    margin-right: 20px;
+                    margin-left: 20px;
+                }
+            }
+            </style>
+            
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <ul class="author-info">
+                        <div class="author">
+                            <li>
+                                <a href="https://daia99.github.io/" class="author-name">Andrew Dai&ast;</a>
+                            </li>
+                            <li>
+                                <a href="https://www.borismeinardus.com/" class="author-name">Boris Meinardus&ast;</a>
+                            </li>
+                            <li class="author-break"></li>
+                            <li>
+                                <a href="https://ciaranregan.dev/" class="author-name">Ciaran Regan</a>
+                            </li>
+                            <li>
+                                <a href="https://alantian.net/" class="author-name">Yingtao Tian</a>
+                            </li>
+                            <li>
+                                <a href="https://scholar.google.co.jp/citations?user=3czUzRYAAAAJ" class="author-name">Yujin Tang</a>
+                            </li>
+                        </div>
+                        <li class="affiliation">
+                            <a href="https://sakana.ai/" target="_blank">
+                                <img src="/img/sakana_logo.png" height="100px" alt="Sakana AI" class="sakana-logo" style="vertical-align: middle;">
+                            </a>
+                        </li>
+                        <li class="affiliation">
+                            Asterisk (&ast;) denotes equal contribution.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row">
+                <h4 class="col-md-12 text-center" style="color: #999;">
+                    ICLR 2026<br><span style="display:block; margin-top:0.5em;"></span>Saturday 25 April 15:15 BRT<br>[Pavilion 3 P3 - #607]
+                </h4>
+            </div>
+
+                <div class="row">
+                  <div class="col-md-12 text-center">
+                    <ul class="list-inline">
+                      <li>
+                        <a href="https://arxiv.org/abs/2604.14969">
+                          <div class="link-content">
+                            <img src="/img/acdc_paper.png" height="60px">
+                            <h4><strong>Paper</strong></h4>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://github.com/SakanaAI/AC-DC">
+                          <div class="link-content">
+                            <img src="/img/github.png" height="60px">
+                            <h4><strong>Code</strong></h4>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://github.com/ACDC-LLM/acdc-llm.github.io/blob/main/img/poster.png">
+                          <div class="link-content">
+                            <img src="/img/poster_thumbnail.png" height="60px">
+                            <h4><strong>Poster</strong></h4>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <video width="100%" controls autoplay class="media-block">
+                  <source src="/video/ac_dc.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>  
+                <h3>
+                    Abstract
+                </h3>
+                <p class="text-justify">
+                  Frontier model developers aim to train models continually to possess emergent, diverse capabilities. To extend capabilities, the current pre-training and post-training paradigm requires manually starting training runs with static datasets or reward functions every time. Addressing this limitation, our work pursues the insight that open-endedness (via the coevolution of models and tasks) can discover models with increasingly novel skills in a single run. We introduce a new model development framework that extends coevolution to large language model (LLM) discovery, open-ended <em>Assessment Coevolving with Diverse Capabilities</em> (AC/DC). AC/DC evolves both LLMs via model merging and natural language tasks via synthetic data generation. AC/DC discovers growing archives of LLMs that surpass the capabilities of larger LLMs while taking up less GPU memory. In particular, our LLM populations achieve a broader Coverage of expertise than other curated models or baselines on downstream benchmarks, without <em>any</em> explicit benchmark optimization. Furthermore, AC/DC improves Coverage over time, continually innovates on tasks and models, and improves performance in multi-agent best-of-N selection. Our findings highlight the potential of coevolution as a means of discovering broader sets of capabilities from base LLMs. Overall, AC/DC brings us one step closer to a profoundly new paradigm of LLM development, where continual improvements to the diversity of model capabilities can be accelerated by leveraging existing models as stepping stones to increasingly powerful models.
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Overview
+                </h3>
+                <image class="media-block img-responsive" src="/img/overview.png" alt="overview"><br>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Method
+                </h3>
+                <image class="media-block img-responsive" src="/img/method.png" alt="method"><br>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Experimental results
+                </h3>
+		<p>
+		  AC/DC discovers different task forces of models that can surpass GPT-4o, and large models from the same model family as evolved models.
+		</p>
+    <p>
+      <b>Animated:</b> Projected task embeddings. AC/DC continually generates novel, more challenging tasks, encouraging the discovery of models that push the frontier of collective knowledge.
+    </p>
+    <video width="100%" controls autoplay muted loop class="media-block">
+      <source src="/video/task_embedding.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <div style="margin-top: 20px;"></div>
+    <image class="media-block img-responsive" src="/img/coverage_table.png" alt="overview"><br>
+    <image class="media-block img-responsive" src="/img/bon_trend.png" alt="overview"><br>
+    <p>
+      AC/DC task force (left) has more complementary experts that cover broader knowledge than the control baseline (right) on MMLU Pro subjects.
+    </p>
+    <image class="media-block img-responsive" src="/img/spiderplot.png" alt="overview"><br>
+    <image class="media-block img-responsive" src="/img/vs_qd_baselines.png" alt="overview"><br>
+    <image class="media-block img-responsive" src="/img/ablations.png" alt="overview"><br>
+    <image class="media-block img-responsive" src="/img/static_vs_coevolving.png" alt="overview"><br>
+    <image class="media-block img-responsive" src="/img/benchmark_responses.png" alt="overview"><br>
+    <image class="media-block img-responsive" src="/img/synthetic_task_responses.png" alt="overview"><br>
+    <p>
+      A human study on synthetic tasks from an AC/DC run was conducted. Humans find samples AC/DC tasks more interesting and creative than samples of diverse standard benchmark tasks.
+    </p>
+    <image class="media-block img-responsive" src="/img/human_study.png" alt="overview"><br>
+            </div>
+        </div>
+
+	<div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Conclusion
+                </h3>
+		<p>
+		  In conclusion, AC/DC represents a paradigm shift from scaling individual models toward deliberately developing complementary agent collectives. Via AC/DC, LLMs may one day embody the engine that drives both knowledge acquisition and transformative creativity, enabling discoveries that improve both its own inner workings, and the outer loop environment that it may transform and adapt to in tandem with humans and other AI systems. After all, cultural (co)evolution has been producing leaps of serendipitous invention from the vacuum tube to the computer, in spite of decentralized goals or intellgence. With AC/DC, we demonstrate a first step towards this vision, bringing us closer to discovering collective AI that is as open-ended, complex, and creative as human civilization. 
+		</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Citation
+                </h3>
+                <div class="form-group col-md-12">
+                    <pre id="bibtex" readonly style="font-size: 0.85em;">
+@inproceedings{daidiscovering,
+  title={Discovering Novel LLM Experts via Task-Capability Coevolution},
+  author={Dai, Andrew and Meinardus, Boris and Regan, Ciaran and Tian, Yingtao and Tang, Yujin},
+  booktitle={The Fourteenth International Conference on Learning Representations}
+}</pre>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Acknowledgements
+                </h3>
+                <p class="text-justify">
+                  We thank the Sakana AI research team, in particular (in alphabetical order), Johannes Ackermann, Takuya Akiba, Sam Earle, Simon Guo, David Ha, Shengran Hu, Yuichi Inoue, Llion Jones, Akarsh Kumar, Robert Lange, Sebastian Risi, and Alex L. Zhang, for helpful discussions and feedback. We also thank Koshi Eguchi and Kou Misaki for providing technical support and maintenance during our experimental runs on our compute cluster.
+                  <br>
+                  <br>
+                The website template was borrowed from <a href="https://jonbarron.info/">Jon Barron</a>.
+                </p>
+		<br>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
